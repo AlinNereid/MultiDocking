@@ -15,7 +15,7 @@ namespace MultiDocking.Controller
 
         public async Task<List<string>> GetPdbId(string keyword)
         {
-            const string url = "https://www.rcsb.org/pdb/rest/search/";
+            const string url = "http://www.rcsb.org/pdb/rest/search/";
             var httpClient = new HttpClient();
             var xmlTemplate =
                 $"<orgPdbQuery><queryType>org.pdb.query.simple.AdvancedKeywordQuery</queryType><keywords>{keyword}</keywords></orgPdbQuery>";
