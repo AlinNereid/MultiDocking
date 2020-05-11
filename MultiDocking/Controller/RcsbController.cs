@@ -49,7 +49,7 @@ namespace MultiDocking.Controller
                     _logger.Debug("Download " + pdbName);
                     try
                     {
-                        client.DownloadFile("https://files.rcsb.org/download/" + pdbName, Path.Combine(path, pdbName));
+                        client.DownloadFile("http://files.rcsb.org/download/" + pdbName, Path.Combine(path, pdbName));
                     }
                     catch (Exception e)
                     {
