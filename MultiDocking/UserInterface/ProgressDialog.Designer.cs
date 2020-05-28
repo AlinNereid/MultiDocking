@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProgressDialog));
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.buttonAbort = new System.Windows.Forms.Button();
             this.labelEta = new System.Windows.Forms.Label();
@@ -45,7 +46,7 @@
             // 
             // buttonAbort
             // 
-            this.buttonAbort.Location = new System.Drawing.Point(119, 78);
+            this.buttonAbort.Location = new System.Drawing.Point(119, 86);
             this.buttonAbort.Name = "buttonAbort";
             this.buttonAbort.Size = new System.Drawing.Size(75, 23);
             this.buttonAbort.TabIndex = 10;
@@ -80,19 +81,20 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(314, 115);
+            this.ClientSize = new System.Drawing.Size(314, 121);
             this.Controls.Add(this.labelRunning);
             this.Controls.Add(this.labelEta);
             this.Controls.Add(this.buttonAbort);
             this.Controls.Add(this.progressBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(330, 154);
+            this.MaximumSize = new System.Drawing.Size(330, 160);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(330, 154);
+            this.MinimumSize = new System.Drawing.Size(330, 160);
             this.Name = "ProgressDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "ProgressDialog";
+            this.Text = "Progress Dialog";
             this.Load += new System.EventHandler(this.ProgressDialog_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

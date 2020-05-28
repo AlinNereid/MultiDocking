@@ -28,17 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.downloadPdbControl = new MultiDocking.UserInterface.Controls.DownloadPdbControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.prepareTargetsControl = new MultiDocking.UserInterface.Controls.PrepareTargetsControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.targetsToPdbqtControl = new MultiDocking.UserInterface.Controls.TargetsToPdbqtControl();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.runMultiDockingControl = new MultiDocking.UserInterface.Controls.RunMultiDockingControl();
-            this.resultsToExcel = new MultiDocking.UserInterface.Controls.ResultsToExcel();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.exportResultsControl = new MultiDocking.UserInterface.Controls.ExportResultsControl();
+            this.tabHelp = new System.Windows.Forms.TabPage();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -54,6 +56,7 @@
             this.tabControl.Controls.Add(this.tabPage3);
             this.tabControl.Controls.Add(this.tabPage4);
             this.tabControl.Controls.Add(this.tabPage5);
+            this.tabControl.Controls.Add(this.tabHelp);
             this.tabControl.Location = new System.Drawing.Point(12, 12);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
@@ -108,6 +111,13 @@
             this.tabPage3.Text = "Targets to PDBQT";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // targetsToPdbqtControl
+            // 
+            this.targetsToPdbqtControl.Location = new System.Drawing.Point(2, 2);
+            this.targetsToPdbqtControl.Name = "targetsToPdbqtControl";
+            this.targetsToPdbqtControl.Size = new System.Drawing.Size(970, 670);
+            this.targetsToPdbqtControl.TabIndex = 0;
+            // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.runMultiDockingControl);
@@ -119,37 +129,40 @@
             this.tabPage4.Text = "Run Multi Docking";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.resultsToExcel);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(976, 679);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Results To Xlsx";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // targetsToPdbqtControl1
-            // 
-            this.targetsToPdbqtControl.Location = new System.Drawing.Point(2, 2);
-            this.targetsToPdbqtControl.Name = "targetsToPdbqtControl";
-            this.targetsToPdbqtControl.Size = new System.Drawing.Size(970, 670);
-            this.targetsToPdbqtControl.TabIndex = 0;
-            // 
-            // runMultiDockingControl1
+            // runMultiDockingControl
             // 
             this.runMultiDockingControl.Location = new System.Drawing.Point(2, 2);
             this.runMultiDockingControl.Name = "runMultiDockingControl";
             this.runMultiDockingControl.Size = new System.Drawing.Size(970, 670);
             this.runMultiDockingControl.TabIndex = 0;
             // 
-            // resultsToExcel1
+            // tabPage5
             // 
-            this.resultsToExcel.Location = new System.Drawing.Point(2, 2);
-            this.resultsToExcel.Name = "resultsToExcel";
-            this.resultsToExcel.Size = new System.Drawing.Size(970, 670);
-            this.resultsToExcel.TabIndex = 0;
+            this.tabPage5.Controls.Add(this.exportResultsControl);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(976, 679);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Export Results";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // exportResultsControl
+            // 
+            this.exportResultsControl.Location = new System.Drawing.Point(2, 2);
+            this.exportResultsControl.Name = "exportResultsControl";
+            this.exportResultsControl.Size = new System.Drawing.Size(970, 670);
+            this.exportResultsControl.TabIndex = 0;
+            // 
+            // tabHelp
+            // 
+            this.tabHelp.Location = new System.Drawing.Point(4, 22);
+            this.tabHelp.Name = "tabHelp";
+            this.tabHelp.Padding = new System.Windows.Forms.Padding(3);
+            this.tabHelp.Size = new System.Drawing.Size(976, 679);
+            this.tabHelp.TabIndex = 5;
+            this.tabHelp.Text = "Help";
+            this.tabHelp.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -158,6 +171,8 @@
             this.ClientSize = new System.Drawing.Size(1008, 729);
             this.Controls.Add(this.tabControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1024, 768);
             this.MinimumSize = new System.Drawing.Size(1024, 768);
             this.Name = "MainForm";
@@ -185,7 +200,8 @@
         private Controls.PrepareTargetsControl prepareTargetsControl;
         private Controls.TargetsToPdbqtControl targetsToPdbqtControl;
         private Controls.RunMultiDockingControl runMultiDockingControl;
-        private Controls.ResultsToExcel resultsToExcel;
+        private Controls.ExportResultsControl exportResultsControl;
+        private System.Windows.Forms.TabPage tabHelp;
     }
 }
 

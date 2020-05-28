@@ -36,7 +36,7 @@ namespace MultiDocking.UserInterface
             }
             else if (tabControl.SelectedIndex == 4)
             {
-                resultsToExcel.SetInput(runMultiDockingControl.GetOutputPath());
+                exportResultsControl.SetInput(runMultiDockingControl.GetOutputPath());
             }
         }
     }
