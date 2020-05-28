@@ -84,11 +84,11 @@
     <Compile Include="UserInterface\Controls\PrepareTargetsControl.Designer.cs">
       <DependentUpon>PrepareTargetsControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserInterface\Controls\ResultsToExcel.cs">
+    <Compile Include="UserInterface\Controls\ExportResultsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserInterface\Controls\ResultsToExcel.designer.cs">
-      <DependentUpon>ResultsToExcel.cs</DependentUpon>
+    <Compile Include="UserInterface\Controls\ExportResultsControl.designer.cs">
+      <DependentUpon>ExportResultsControl.cs</DependentUpon>
     </Compile>
     <Compile Include="UserInterface\Controls\RunMultiDockingControl.cs">
       <SubType>UserControl</SubType>
@@ -133,8 +133,8 @@
     <EmbeddedResource Include="UserInterface\Controls\PrepareTargetsControl.resx">
       <DependentUpon>PrepareTargetsControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserInterface\Controls\ResultsToExcel.resx">
-      <DependentUpon>ResultsToExcel.cs</DependentUpon>
+    <EmbeddedResource Include="UserInterface\Controls\ExportResultsControl.resx">
+      <DependentUpon>ExportResultsControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserInterface\Controls\RunMultiDockingControl.resx">
       <DependentUpon>RunMultiDockingControl.cs</DependentUpon>

@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Text;
 using System.Windows.Forms;
 using ClosedXML.Excel;
 
 namespace MultiDocking.UserInterface.Controls
 {
-    public partial class ResultsToExcel : MUserControl
+    public partial class ExportResultsControl : MUserControl
     {
-        public ResultsToExcel()
+        public ExportResultsControl()
         {
             InitializeComponent();
         }
@@ -86,8 +87,8 @@ namespace MultiDocking.UserInterface.Controls
         private void buttonExportToExcel_Click(object sender, EventArgs e)
         {
             var saveFile = new SaveFileDialog();
-            saveFile.DefaultExt = ".xlsx";
-            saveFile.Filter = "xlsx |*.xlsx";
+            saveFile.DefaultExt = ".csv";
+            saveFile.Filter = "CSV Document|*.csv|Excel Worksheet|*.xls";
             if (saveFile.ShowDialog() == DialogResult.OK)
             {
                 var files = new List<FileInfo>();
@@ -99,29 +100,44 @@ namespace MultiDocking.UserInterface.Controls
                     }
                 }
 
-                var list = new List<Tuple<string, double>>();
 
-                var workbook = new XLWorkbook();
-                var worksheet = workbook.Worksheets.Add("MinEnergy");
-
-                var row = 1;
-
-                worksheet.Row(row).Cell(1).Value = "Protein";
-                worksheet.Row(row).Cell(2).Value = "MinEnergy";
-                worksheet.Row(row).Cell(3).Value = "Duration (seconds)";
-                row++;
-
-                foreach (var fileInfo in files)
+                if (saveFile.FileName.ToLower().EndsWith("xls"))
                 {
-                    var content = File.ReadAllText(fileInfo.FullName);
-                    worksheet.Row(row).Cell(1).Value = fileInfo.Name;
-                    worksheet.Row(row).Cell(2).Value = MinEnergy(content);
-                    worksheet.Row(row).Cell(3).Value = Duration(content);
-                    row++;
-                }
-                workbook.SaveAs(saveFile.FileName);
+                    
+                    var workbook = new XLWorkbook();
+                    var worksheet = workbook.Worksheets.Add("MinEnergy");
 
-                Process.Start(saveFile.FileName);
+                    var row = 1;
+
+                    worksheet.Row(row).Cell(1).Value = "Protein";
+                    worksheet.Row(row).Cell(2).Value = "MinEnergy";
+                    worksheet.Row(row).Cell(3).Value = "Duration (seconds)";
+                    row++;
+
+                    foreach (var fileInfo in files)
+                    {
+                        var content = File.ReadAllText(fileInfo.FullName);
+                        worksheet.Row(row).Cell(1).Value = fileInfo.Name;
+                        worksheet.Row(row).Cell(2).Value = MinEnergy(content);
+                        worksheet.Row(row).Cell(3).Value = Duration(content);
+                        row++;
+                    }
+
+                    workbook.SaveAs(saveFile.FileName);
+                }
+                else
+                {
+                    var sb = new StringBuilder();
+
+                    sb.Append("Protein,MinEnergy,Duration (seconds)\r\n");
+                    foreach (var fileInfo in files)
+                    {
+                        var content = File.ReadAllText(fileInfo.FullName);
+                        sb.AppendLine($"\"{fileInfo.Name}\",\"{MinEnergy(content)}\",\"{Duration(content)}\"");
+                    }
+
+                    File.WriteAllText(saveFile.FileName, sb.ToString());
+                }
             }
         }
     }

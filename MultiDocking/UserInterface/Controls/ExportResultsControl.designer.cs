@@ -1,6 +1,6 @@
 ﻿namespace MultiDocking.UserInterface.Controls
 {
-    partial class ResultsToExcel
+    partial class ExportResultsControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -122,11 +122,11 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(945, 23);
             this.button1.TabIndex = 25;
-            this.button1.Text = "Export To Excel";
+            this.button1.Text = "Export to CSV/XLS";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.buttonExportToExcel_Click);
             // 
-            // ResultsToExcel
+            // ExportResultsControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -136,7 +136,7 @@
             this.Controls.Add(this.buttonBrowse);
             this.Controls.Add(this.labelPath);
             this.Controls.Add(this.textBoxPathInput);
-            this.Name = "ResultsToExcel";
+            this.Name = "ExportResultsControl";
             this.Size = new System.Drawing.Size(970, 670);
             this.groupBoxResults.ResumeLayout(false);
             this.ResumeLayout(false);
