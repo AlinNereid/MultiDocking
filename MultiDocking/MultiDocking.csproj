@@ -69,6 +69,12 @@
     <Compile Include="Controller\PrepareReceptorController.cs" />
     <Compile Include="Controller\RcsbController.cs" />
     <Compile Include="Controller\RemoveLigandsController.cs" />
+    <Compile Include="UserInterface\AboutMultiDocking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\AboutMultiDocking.Designer.cs">
+      <DependentUpon>AboutMultiDocking.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserInterface\Controls\MUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     <Compile Include="UserInterface\WelcomeSetWorkspaceForm.designer.cs">
       <DependentUpon>WelcomeSetWorkspaceForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserInterface\AboutMultiDocking.resx">
+      <DependentUpon>AboutMultiDocking.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserInterface\Controls\DownloadPdbControl.resx">
       <DependentUpon>DownloadPdbControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,6 +162,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UserInterface\ProgressDialog.resx">
       <DependentUpon>ProgressDialog.cs</DependentUpon>
@@ -173,6 +183,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\UserManual\MultiDockingUserManual.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Settings.settings">
       <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -183,6 +196,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <Content Include="Resources\Images\icon512.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

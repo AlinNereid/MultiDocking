@@ -45,6 +45,7 @@
             this.mglToolsBrowse = new System.Windows.Forms.Button();
             this.autoDockVinaBrowse = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.buttonAbout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -60,7 +61,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 328);
+            this.label2.Location = new System.Drawing.Point(16, 328);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 13);
             this.label2.TabIndex = 1;
@@ -98,7 +99,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(16, 53);
+            this.label3.Location = new System.Drawing.Point(16, 41);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 18);
             this.label3.TabIndex = 5;
@@ -108,7 +109,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(16, 87);
+            this.label4.Location = new System.Drawing.Point(16, 76);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(153, 16);
             this.label4.TabIndex = 6;
@@ -118,7 +119,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(17, 172);
+            this.label5.Location = new System.Drawing.Point(16, 161);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(178, 16);
             this.label5.TabIndex = 7;
@@ -127,7 +128,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(50, 113);
+            this.linkLabel1.Location = new System.Drawing.Point(50, 102);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(189, 13);
             this.linkLabel1.TabIndex = 8;
@@ -138,7 +139,7 @@
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(51, 198);
+            this.linkLabel2.Location = new System.Drawing.Point(51, 187);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(188, 13);
             this.linkLabel2.TabIndex = 9;
@@ -149,7 +150,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(17, 298);
+            this.label6.Location = new System.Drawing.Point(16, 289);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(457, 13);
             this.label6.TabIndex = 10;
@@ -158,21 +159,21 @@
             // 
             // mglToolsPath
             // 
-            this.mglToolsPath.Location = new System.Drawing.Point(53, 141);
+            this.mglToolsPath.Location = new System.Drawing.Point(53, 130);
             this.mglToolsPath.Name = "mglToolsPath";
             this.mglToolsPath.Size = new System.Drawing.Size(631, 20);
             this.mglToolsPath.TabIndex = 11;
             // 
             // autoDockVinaPath
             // 
-            this.autoDockVinaPath.Location = new System.Drawing.Point(54, 227);
+            this.autoDockVinaPath.Location = new System.Drawing.Point(54, 216);
             this.autoDockVinaPath.Name = "autoDockVinaPath";
             this.autoDockVinaPath.Size = new System.Drawing.Size(631, 20);
             this.autoDockVinaPath.TabIndex = 12;
             // 
             // mglToolsBrowse
             // 
-            this.mglToolsBrowse.Location = new System.Drawing.Point(690, 141);
+            this.mglToolsBrowse.Location = new System.Drawing.Point(690, 130);
             this.mglToolsBrowse.Name = "mglToolsBrowse";
             this.mglToolsBrowse.Size = new System.Drawing.Size(86, 23);
             this.mglToolsBrowse.TabIndex = 13;
@@ -182,7 +183,7 @@
             // 
             // autoDockVinaBrowse
             // 
-            this.autoDockVinaBrowse.Location = new System.Drawing.Point(691, 225);
+            this.autoDockVinaBrowse.Location = new System.Drawing.Point(691, 214);
             this.autoDockVinaBrowse.Name = "autoDockVinaBrowse";
             this.autoDockVinaBrowse.Size = new System.Drawing.Size(86, 23);
             this.autoDockVinaBrowse.TabIndex = 14;
@@ -194,17 +195,28 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(17, 265);
+            this.label7.Location = new System.Drawing.Point(16, 252);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(170, 16);
             this.label7.TabIndex = 15;
             this.label7.Text = "•      Internet connection";
+            // 
+            // buttonAbout
+            // 
+            this.buttonAbout.Location = new System.Drawing.Point(17, 358);
+            this.buttonAbout.Name = "buttonAbout";
+            this.buttonAbout.Size = new System.Drawing.Size(127, 23);
+            this.buttonAbout.TabIndex = 16;
+            this.buttonAbout.Text = "About Multi Docking";
+            this.buttonAbout.UseVisualStyleBackColor = true;
+            this.buttonAbout.Click += new System.EventHandler(this.buttonAbout_Click);
             // 
             // WelcomeSetWorkspaceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 391);
+            this.Controls.Add(this.buttonAbout);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.autoDockVinaBrowse);
             this.Controls.Add(this.mglToolsBrowse);
@@ -221,6 +233,7 @@
             this.Controls.Add(this.textBoxPath);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -250,5 +263,6 @@
         private System.Windows.Forms.Button mglToolsBrowse;
         private System.Windows.Forms.Button autoDockVinaBrowse;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button buttonAbout;
     }
 }

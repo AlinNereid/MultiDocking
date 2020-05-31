@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Windows.Forms;
+using DocumentFormat.OpenXml.Drawing;
 using MultiDocking.Controller;
 
 namespace MultiDocking.UserInterface
@@ -30,6 +32,30 @@ namespace MultiDocking.UserInterface
             {
                 exportResultsControl.SetInput(runMultiDockingControl.GetOutputPath());
             }
+        }
+
+        private void buttonAbout_Click(object sender, EventArgs e)
+        {
+            new AboutMultiDocking().ShowDialog();
+        }
+
+        private void buttonUserManual_Click(object sender, EventArgs e)
+        {
+            Process.Start(System.IO.Path.Combine(System.IO.Path.GetDirectoryName(
+                    System.Reflection.Assembly.GetEntryAssembly().Location),
+                @"Resources\UserManual\MultiDockingUserManual.pdf"));
+        }
+
+        private void buttonReportBug_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/AlinNereid/MultiDocking/issues");
+        }
+
+        private void buttonAskAQuestion_Click(object sender, EventArgs e)
+        {
+            string mailto = string.Format("mailto:{0}?Subject={1}", "gina.lupascu@yahoo.com", "Question about Multi Docking");
+            mailto = Uri.EscapeUriString(mailto);
+            System.Diagnostics.Process.Start(mailto);
         }
     }
 }

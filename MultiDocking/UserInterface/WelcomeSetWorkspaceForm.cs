@@ -107,5 +107,10 @@ namespace MultiDocking.UserInterface
                 autoDockVinaPath.Text = browseFolder.SelectedPath;
             }
         }
+
+        private void buttonAbout_Click(object sender, EventArgs e)
+        {
+            new AboutMultiDocking().ShowDialog();
+        }
     }
 }
