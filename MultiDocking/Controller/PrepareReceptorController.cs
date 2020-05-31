@@ -28,7 +28,7 @@ namespace MultiDocking.Controller
                         var cli = Cli.Wrap(Settings.Default.MGLToolsPython)
                             .SetWorkingDirectory(inputFolder)
                             .SetArguments(
-                                $"{Settings.Default.PrepareReceptortScript} -r " +
+                                $"{Settings.Default.PrepareReceptorScript} -r " +
                                 fi.Name)
                             .SetStandardOutputCallback(l =>
                                 Console.WriteLine($"StdOut> {l}")) // triggered on every line in stdout

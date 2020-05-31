@@ -13,6 +13,7 @@ namespace MultiDocking.UserInterface.Controls
             InitializeComponent();
             groupBoxDownload.Visible = false;
             groupBoxResults.Visible = false;
+            textBoxPath.Text = Path.Combine(Controllers.WorkSpacePath, "downloadPdb");
         }
 
         private async void buttonSearch_Click(object sender, EventArgs e)

@@ -16,6 +16,7 @@ namespace MultiDocking.UserInterface.Controls
             InitializeComponent();
             groupBoxRemove.Visible = false;
             groupBoxResults.Visible = false;
+            textBoxPathOutput.Text = Path.Combine(Settings.Default.WorkSpacePath, "onlyProteins");
         }
 
         public override string GetOutputPath()

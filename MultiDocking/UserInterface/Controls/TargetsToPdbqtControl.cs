@@ -15,7 +15,8 @@ namespace MultiDocking.UserInterface.Controls
             groupBoxResults.Visible = false;
 
             textBoxPythonPath.Text = Settings.Default.MGLToolsPython;
-            textBoxScript.Text = Settings.Default.PrepareReceptortScript;
+            textBoxScript.Text = Settings.Default.PrepareReceptorScript;
+            textBoxPathOutput.Text = Path.Combine(Settings.Default.WorkSpacePath, "proteinsPdbqt");
         }
 
         public override string GetOutputPath()
@@ -89,7 +90,7 @@ namespace MultiDocking.UserInterface.Controls
         private void buttonConvertToPdbQt_Click(object sender, EventArgs e)
         {
             Settings.Default.MGLToolsPython = textBoxPythonPath.Text;
-            Settings.Default.PrepareReceptortScript = textBoxScript.Text;
+            Settings.Default.PrepareReceptorScript = textBoxScript.Text;
             Settings.Default.Save();
 
             var files = new List<string>();

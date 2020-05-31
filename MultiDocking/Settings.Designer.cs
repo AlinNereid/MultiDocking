@@ -12,7 +12,7 @@ namespace MultiDocking {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.4.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.9.0.0")]
     public sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -50,12 +50,12 @@ namespace MultiDocking {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string PrepareReceptortScript {
+        public string PrepareReceptorScript {
             get {
-                return ((string)(this["PrepareReceptortScript"]));
+                return ((string)(this["PrepareReceptorScript"]));
             }
             set {
-                this["PrepareReceptortScript"] = value;
+                this["PrepareReceptorScript"] = value;
             }
         }
         
@@ -128,6 +128,30 @@ namespace MultiDocking {
             }
             set {
                 this["DockingRuns"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string AutoDockVinaPath {
+            get {
+                return ((string)(this["AutoDockVinaPath"]));
+            }
+            set {
+                this["AutoDockVinaPath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string MglToolsPath {
+            get {
+                return ((string)(this["MglToolsPath"]));
+            }
+            set {
+                this["MglToolsPath"] = value;
             }
         }
     }

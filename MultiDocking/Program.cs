@@ -14,7 +14,12 @@ namespace MultiDocking
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            var welcomeForm = new WelcomeSetWorkspaceForm();
+            welcomeForm.ShowDialog();
+            if (welcomeForm.DialogResult == DialogResult.OK)
+            {
+                Application.Run(new MainForm());
+            }
         }
     }
 }

@@ -8,16 +8,8 @@ namespace MultiDocking.UserInterface
     {
         public MainForm()
         {
-            InitializeComponent();
-        }
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            var welcomeForm = new WelcomeSetWorkspaceForm();
-            welcomeForm.ShowDialog();
-            if (welcomeForm.DialogResult != DialogResult.OK)
-                Application.Exit();
             Controllers.WorkSpacePath = Settings.Default.WorkSpacePath;
+            InitializeComponent();
         }
 
         private void tabControl_SelectedIndexChanged(object sender, EventArgs e)

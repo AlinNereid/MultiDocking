@@ -19,6 +19,7 @@ namespace MultiDocking.UserInterface.Controls
             textBoxNumModes.Text = Settings.Default.NumModes.ToString();
             checkBoxFirstMer.Checked = Settings.Default.FirstMer;
             dockingRunsTextBox.Text = Settings.Default.DockingRuns.ToString();
+            textBoxResultsPath.Text = Path.Combine(Settings.Default.WorkSpacePath, "dockingResults");
         }
 
         public override string GetOutputPath()
