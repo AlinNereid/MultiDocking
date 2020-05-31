@@ -70,7 +70,7 @@ namespace MultiDocking.UserInterface
             if (MglToolsPath != Settings.Default.MglToolsPath)
             {
                 Settings.Default.MGLToolsPython = Path.Combine(MglToolsPath, "python.exe");
-                Settings.Default.PrepareReceptorScript = Path.Combine(MglToolsPath, @"\Lib\site-packages\AutoDockTools\Utilities24\prepare_receptor4.py");
+                Settings.Default.PrepareReceptorScript = Path.Combine(MglToolsPath, @"Lib\site-packages\AutoDockTools\Utilities24\prepare_receptor4.py");
             }
             Settings.Default.MglToolsPath = MglToolsPath;
             Settings.Default.Save();
