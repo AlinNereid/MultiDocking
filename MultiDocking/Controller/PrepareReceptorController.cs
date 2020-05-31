@@ -25,10 +25,10 @@ namespace MultiDocking.Controller
                     _logger.Debug($"Process {fi.Name}");
                     try
                     {
-                        var cli = Cli.Wrap(Settings.Default.MGLToolsPython)
+                        var cli = Cli.Wrap("\""+Settings.Default.MGLToolsPython + "\"")
                             .SetWorkingDirectory(inputFolder)
                             .SetArguments(
-                                $"{Settings.Default.PrepareReceptorScript} -r " +
+                                $"{"\"" + Settings.Default.PrepareReceptorScript + "\""} -r " +
                                 fi.Name)
                             .SetStandardOutputCallback(l =>
                                 Console.WriteLine($"StdOut> {l}")) // triggered on every line in stdout

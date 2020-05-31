@@ -130,7 +130,7 @@ namespace MultiDocking.Controller
                         {
 
                             var startTimeForProcess = DateTime.Now;
-                            var cli = Cli.Wrap(Settings.Default.VinaPath)
+                            var cli = Cli.Wrap("\""+Settings.Default.VinaPath+ "\"")
                                 .SetWorkingDirectory(tempFolder)
                                 .SetArguments(
                                     "--config " + "config.txt")

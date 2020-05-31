@@ -73,7 +73,7 @@ namespace MultiDocking {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("5")]
         public double NumModes {
             get {
                 return ((double)(this["NumModes"]));
@@ -85,7 +85,7 @@ namespace MultiDocking {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
         public double Exhaustiveness {
             get {
                 return ((double)(this["Exhaustiveness"]));
