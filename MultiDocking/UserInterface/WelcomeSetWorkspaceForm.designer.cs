@@ -44,6 +44,7 @@
             this.autoDockVinaPath = new System.Windows.Forms.TextBox();
             this.mglToolsBrowse = new System.Windows.Forms.Button();
             this.autoDockVinaBrowse = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -59,7 +60,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 296);
+            this.label2.Location = new System.Drawing.Point(17, 328);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 13);
             this.label2.TabIndex = 1;
@@ -67,14 +68,14 @@
             // 
             // textBoxPath
             // 
-            this.textBoxPath.Location = new System.Drawing.Point(111, 293);
+            this.textBoxPath.Location = new System.Drawing.Point(112, 325);
             this.textBoxPath.Name = "textBoxPath";
             this.textBoxPath.Size = new System.Drawing.Size(573, 20);
             this.textBoxPath.TabIndex = 2;
             // 
             // buttonBrowse
             // 
-            this.buttonBrowse.Location = new System.Drawing.Point(691, 291);
+            this.buttonBrowse.Location = new System.Drawing.Point(692, 323);
             this.buttonBrowse.Name = "buttonBrowse";
             this.buttonBrowse.Size = new System.Drawing.Size(86, 23);
             this.buttonBrowse.TabIndex = 3;
@@ -85,7 +86,7 @@
             // buttonStart
             // 
             this.buttonStart.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonStart.Location = new System.Drawing.Point(283, 326);
+            this.buttonStart.Location = new System.Drawing.Point(284, 358);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(205, 23);
             this.buttonStart.TabIndex = 4;
@@ -126,7 +127,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(50, 117);
+            this.linkLabel1.Location = new System.Drawing.Point(50, 113);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(189, 13);
             this.linkLabel1.TabIndex = 8;
@@ -137,7 +138,7 @@
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(51, 204);
+            this.linkLabel2.Location = new System.Drawing.Point(51, 198);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(188, 13);
             this.linkLabel2.TabIndex = 9;
@@ -148,7 +149,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(16, 266);
+            this.label6.Location = new System.Drawing.Point(17, 298);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(457, 13);
             this.label6.TabIndex = 10;
@@ -157,14 +158,14 @@
             // 
             // mglToolsPath
             // 
-            this.mglToolsPath.Location = new System.Drawing.Point(53, 143);
+            this.mglToolsPath.Location = new System.Drawing.Point(53, 141);
             this.mglToolsPath.Name = "mglToolsPath";
             this.mglToolsPath.Size = new System.Drawing.Size(631, 20);
             this.mglToolsPath.TabIndex = 11;
             // 
             // autoDockVinaPath
             // 
-            this.autoDockVinaPath.Location = new System.Drawing.Point(54, 229);
+            this.autoDockVinaPath.Location = new System.Drawing.Point(54, 227);
             this.autoDockVinaPath.Name = "autoDockVinaPath";
             this.autoDockVinaPath.Size = new System.Drawing.Size(631, 20);
             this.autoDockVinaPath.TabIndex = 12;
@@ -181,7 +182,7 @@
             // 
             // autoDockVinaBrowse
             // 
-            this.autoDockVinaBrowse.Location = new System.Drawing.Point(691, 227);
+            this.autoDockVinaBrowse.Location = new System.Drawing.Point(691, 225);
             this.autoDockVinaBrowse.Name = "autoDockVinaBrowse";
             this.autoDockVinaBrowse.Size = new System.Drawing.Size(86, 23);
             this.autoDockVinaBrowse.TabIndex = 14;
@@ -189,11 +190,22 @@
             this.autoDockVinaBrowse.UseVisualStyleBackColor = true;
             this.autoDockVinaBrowse.Click += new System.EventHandler(this.autoDockVinaBrowse_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(17, 265);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(170, 16);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "•      Internet connection";
+            // 
             // WelcomeSetWorkspaceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 361);
+            this.ClientSize = new System.Drawing.Size(784, 391);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.autoDockVinaBrowse);
             this.Controls.Add(this.mglToolsBrowse);
             this.Controls.Add(this.autoDockVinaPath);
@@ -237,5 +249,6 @@
         private System.Windows.Forms.TextBox autoDockVinaPath;
         private System.Windows.Forms.Button mglToolsBrowse;
         private System.Windows.Forms.Button autoDockVinaBrowse;
+        private System.Windows.Forms.Label label7;
     }
 }
