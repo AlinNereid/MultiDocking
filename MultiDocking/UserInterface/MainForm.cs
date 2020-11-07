@@ -32,6 +32,11 @@ namespace MultiDocking.UserInterface
             {
                 exportResultsControl.SetInput(runMultiDockingControl.GetOutputPath());
             }
+            else if (tabControl.SelectedIndex == 5)
+            {
+                calculateRMSDsControl.SetInput(runMultiDockingControl.GetOutputPath());
+                calculateRMSDsControl.SetPdbFolder(downloadPdbControl.GetOutputPath());
+            }
         }
 
         private void buttonAbout_Click(object sender, EventArgs e)

@@ -7,5 +7,6 @@
         public static readonly RemoveLigandsController RemoveLigandsController = new RemoveLigandsController();
         public static readonly PrepareReceptorController PrepareReceptorController = new PrepareReceptorController();
         public static readonly DockingVinaController DockingVinaController = new DockingVinaController();
+        public static readonly RmsdController RmsdController = new RmsdController();
     }
 }
