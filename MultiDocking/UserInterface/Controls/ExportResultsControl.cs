@@ -88,7 +88,7 @@ namespace MultiDocking.UserInterface.Controls
         {
             var saveFile = new SaveFileDialog();
             saveFile.DefaultExt = ".csv";
-            saveFile.Filter = "CSV Document|*.csv|Excel Worksheet|*.xls";
+            saveFile.Filter = "CSV Document|*.csv|Excel Worksheet|*.xlsx";
             if (saveFile.ShowDialog() == DialogResult.OK)
             {
                 var files = new List<FileInfo>();
@@ -101,7 +101,7 @@ namespace MultiDocking.UserInterface.Controls
                 }
 
 
-                if (saveFile.FileName.ToLower().EndsWith("xls"))
+                if (saveFile.FileName.ToLower().EndsWith("xlsx"))
                 {
                     
                     var workbook = new XLWorkbook();
