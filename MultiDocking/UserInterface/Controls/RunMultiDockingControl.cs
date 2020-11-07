@@ -44,7 +44,7 @@ namespace MultiDocking.UserInterface.Controls
         private void buttonLoad_Click(object sender, EventArgs e)
         {
             checkedListBox.Items.Clear();
-            foreach (var pdb in Directory.GetFiles(textBoxPathInput.Text, "*.pdb")) checkedListBox.Items.Add(pdb, true);
+            foreach (var pdb in Directory.GetFiles(textBoxPathInput.Text, "*.pdbqt")) checkedListBox.Items.Add(pdb, true);
             textBoxResultsPath.Text = Path.Combine(Settings.Default.WorkSpacePath, "dockingResults");
             groupBoxRemove.Visible = true;
             groupBoxResults.Visible = true;
