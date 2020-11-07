@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using NLog;
 
 namespace MultiDocking.Controller
@@ -15,21 +18,24 @@ namespace MultiDocking.Controller
 
         public async Task<List<string>> GetPdbId(string keyword)
         {
-            const string url = "http://www.rcsb.org/pdb/rest/search/";
+            const string url = "http://search.rcsb.org/rcsbsearch/v1/query";
             var httpClient = new HttpClient();
-            var xmlTemplate =
-                $"<orgPdbQuery><queryType>org.pdb.query.simple.AdvancedKeywordQuery</queryType><keywords>{keyword}</keywords></orgPdbQuery>";
-            var response = await httpClient.PostAsync(url,
-                new StringContent(xmlTemplate, Encoding.UTF8, "application/x-www-form-urlencoded"));
+            var jsonTemplate =
+                $"?json=%7B\"query\":%7B\"type\":\"terminal\",\"service\":\"text\",\"parameters\":%7B\"value\":\"{keyword}\"%7D%7D,\"return_type\":\"entry\",\"request_options\":%7B\"pager\":%7B\"start\":0,\"rows\":10000%7D%7D%7D";
+            var response = await httpClient.GetAsync(url+jsonTemplate);
             var responseString = await response.Content.ReadAsStringAsync();
 
-            var pdbIds = new List<string>();
-            foreach (var pdbId in responseString.Split(Environment.NewLine.ToCharArray()))
-            {
-                if (!string.IsNullOrEmpty(pdbId))
-                    pdbIds.Add(pdbId);
+            var json = JObject.Parse(responseString);
 
+            var pdbIds = new List<string>();
+
+            foreach (var result in json["result_set"])
+            {
+                var identified = result["identifier"];
+                pdbIds.Add(identified.ToString());
             }
+
+            pdbIds.Sort();
 
             return pdbIds;
         }
