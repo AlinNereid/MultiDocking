@@ -153,7 +153,7 @@
             this.buttonBrowsePdb.TabIndex = 28;
             this.buttonBrowsePdb.Text = "Browse";
             this.buttonBrowsePdb.UseVisualStyleBackColor = true;
-            this.buttonBrowsePdb.Click += new System.EventHandler(this.buttonBrowse_Click);
+            this.buttonBrowsePdb.Click += new System.EventHandler(this.buttonBrowsePdb_Click);
             // 
             // CalculateRMSDsControl
             // 
